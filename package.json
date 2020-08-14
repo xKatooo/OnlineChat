@@ -1,0 +1,26 @@
+{
+  "name": "OnlineChat",
+  "version": "1.0.0",
+  "description": "Chat online open source xd",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no especificado\" && exit 1"
+  },
+  "keywords": [
+    "socket",
+    "express",
+    "chat",
+    "Kato"
+  ],
+
+  "author": "Kato",
+  "license": "ISC",
+  "dependencies": {
+    "bootstrap": "^3.3.7",
+    "captainjs": "^1.0.3",
+    "express": "^4.14.0",
+    "jquery": "^3.1.1",
+    "socket.io": "^1.7.2",
+    "vue": "^2.1.8"
+  }
+}
