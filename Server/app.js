@@ -31,7 +31,7 @@ socketio.on('connection', function(socket){
 
         socket.userName = userName;
         users.push(userName);
-        //notice it is not socket.emit('refreshUserList', users)
+        //notificación, no esta socket.emit('refreshUserList', users)
         socketio.sockets.emit('refreshUserList', users);
     });
 
@@ -48,13 +48,13 @@ socketio.on('connection', function(socket){
 
     socket.on('disconnect', function(){
 
-        //when user log off, the name should be removed from the user list
+        //desconectado = eliminado de la lista
         var removedUserIndex = users.indexOf(socket.userName);
         if(removedUserIndex >= 0){
             users.splice(removedUserIndex, 1);
         }
 
-        //notice it is not socket.emit('refreshUserList', users)
+        //notificación, no está socket.emit('refreshUserList', users)
         socketio.sockets.emit('refreshUserList', users);
 
         console.log(socket.userName + ' se ha desconectado');
